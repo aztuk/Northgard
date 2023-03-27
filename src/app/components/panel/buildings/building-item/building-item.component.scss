@@ -1,0 +1,28 @@
+:host {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    &.townhall {
+        background: url(../../../../../assets/images/biomeButton.png);
+        background-position: -3px -3px;
+        background-size: 1310%;
+        img {
+            width: 140%;
+            top: 14px;
+            position: relative;
+        }
+    }
+    &._small {
+        width: 34px;
+        height: 34px;
+    }
+    img {
+        width: inherit;
+    }
+    &:hover {
+        filter: brightness(1.2);
+    }
+}

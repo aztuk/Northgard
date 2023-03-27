@@ -1,0 +1,16 @@
+<div class="order-options" *ngIf="showOptions">
+    <div class="note" (click)="openNote()"></div>
+    <div class="upgrade" (click)="upgrade()" *ngIf="entity.type === 0 && entity.data.upgradable" [class.active]="upgraded"></div>
+    <div class="trash" (click)="destroy()"></div>
+</div>
+
+<div class="isUpgraded" *ngIf="upgraded"></div>
+<div class="note-exists note" *ngIf="note !== ''"></div>
+<div class="applied-note" *ngIf="hovered || noteToggle">{{ note }}</div>
+
+<div class="frame note-wrapper" *ngIf="noteToggle">
+    <textarea [(ngModel)]="note"></textarea>
+</div>
+
+<por-building-item *ngIf="entity.type === 0" class="frame building {{entity.data.class}}" [building]="entity.data" [size]="''" draggable="true" (dragend)="destroy()" (dragstart)="onDragStart($event, entity)"></por-building-item>
+<por-relic-item *ngIf="entity.type === 1" [relic]="entity.data" draggable="true" (dragend)="destroy()" (dragstart)="onDragStart($event, entity)" class="frame"></por-relic-item>

@@ -1,0 +1,11 @@
+<div class="panel">
+    <div class="header">
+        <h1>Lore</h1>
+        <p>Drag and drop a lore in the lore timeline. </p>
+    </div>
+    <div class="category">
+        <div class="lore-item" *ngFor="let lore of getLores()">
+            <por-lore-item [lore]="lore" class="lore {{lore.class}}" draggable="true" (dragstart)="onDragStart($event, lore)"></por-lore-item>
+        </div>
+    </div>
+</div>

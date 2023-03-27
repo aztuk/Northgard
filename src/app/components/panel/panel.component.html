@@ -1,0 +1,12 @@
+<div class="tabs">
+    <button (click)="selectedTab = 'buildings'" [class.active]="selectedTab === 'buildings'"><div class="build"></div></button>
+    <button (click)="selectedTab = 'relics'" [class.active]="selectedTab === 'relics'"><div class="relic"></div></button>
+    <button (click)="selectedTab = 'lore'" [class.active]="selectedTab === 'lore'"><div class="lore"></div></button>
+    <button (click)="selectedTab = 'forge'" [class.active]="selectedTab === 'forge'"><div class="forge"></div></button>
+    <button (click)="selectedTab = 'special'" [class.active]="selectedTab === 'special'"><div class="special"></div></button>
+</div>
+<por-buildings *ngIf="selectedTab === 'buildings'" class="panel">
+</por-buildings>
+<por-relics *ngIf="selectedTab === 'relics'" class="panel"></por-relics>
+<por-lore *ngIf="selectedTab === 'lore'" class="panel"></por-lore>
+<por-special *ngIf="selectedTab === 'special'" class="panel"></por-special>

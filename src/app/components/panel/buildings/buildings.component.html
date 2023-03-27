@@ -1,0 +1,20 @@
+<div class="panel">
+    <div class="header">
+        <h1>Buildings</h1>
+        <p>Drag and drop a building in the timeline. You can also add an upgrade order once the building is added</p>
+    </div>
+    <div class="section-title">Production</div>
+    <div class="category">
+
+        <por-building-item *ngFor="let building of getCivilianBuildings()" [building]="building" class="frame building {{building.class}}" [size]="''" draggable="true" (dragstart)="onDragStart($event, building)"></por-building-item>
+
+    </div>
+    <div class="section-title">Military</div>
+    <div class="category">
+        <por-building-item *ngFor="let building of getMilitaryBuildings()" [building]="building" class="frame building {{building.class}}" [size]="''" draggable="true" (dragstart)="onDragStart($event, building)"></por-building-item>
+    </div>
+    <div class="section-title">Special</div>
+    <div class="category">
+        <por-building-item *ngFor="let building of getSpecialBuildings()" [building]="building" class="frame building {{building.class}}" [size]="''" draggable="true" (dragstart)="onDragStart($event, building)"></por-building-item>
+    </div>
+</div>

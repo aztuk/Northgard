@@ -1,0 +1,73 @@
+:host {
+    display: flex;
+    height: 100vh;
+}
+
+.tabs {
+    display: flex;
+    width: 40px;
+    flex-direction: column;
+    border-right: 1px solid #1f2a35;
+    background: #1f2a35;
+    box-shadow: inset -4px 0 8px 0 rgba($color: #000000, $alpha: .5);
+    box-shadow: 2px 0 0 0px #596478, 3px 0 0 0px #171e26, inset -4px 0 8px 0 rgba($color: #000000, $alpha: .5);
+    button {
+        &:hover:not(.active) {
+            filter: brightness(1.2);
+        }
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: white;
+        width: 40px;
+        height: 110px;
+        background: url(../../../assets/images/horgrBloc1.png);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid black;
+        box-shadow: inset -4px 0 8px 0 rgba($color: #000000, $alpha: .5);
+        margin-bottom: -2px;
+        filter: brightness(0.8);
+        .build {
+            background: url(../../../assets/images/icons/build.png);
+            width: 24px;
+            height: 24px;
+        }
+        .relic {
+            background: url(../../../assets/images/icons/forge_1.png);
+            width: 24px;
+            height: 24px;
+        }
+        .lore {
+            background: url(../../../assets/images/icons/lore.png);
+            width: 24px;
+            height: 24px;
+        }
+        .forge {
+            background: url(../../../assets/images/icons/tools.png);
+            width: 24px;
+            height: 24px;
+        }
+        .special {
+            background: url(../../../assets/images/icons/special.png);
+            width: 24px;
+            height: 24px;
+        }
+        &.active {
+            filter: brightness(1.5);
+            .build,
+            .forge,
+            .relic,
+            .special,
+            .lore {
+                filter: drop-shadow(0 0 5px #9ab8f0);
+            }
+        }
+    }
+}
+
+.panel {
+    flex: 1;
+    padding-top: 12px;
+}

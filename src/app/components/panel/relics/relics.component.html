@@ -1,0 +1,15 @@
+<div class="panel">
+    <div class="header">
+        <h1>Relics</h1>
+        <p>Drag and drop a relics in the timeline. </p>
+    </div>
+    <div class="category">
+        <div class="relic-item" *ngFor="let relic of getRelics()">
+            <por-relic-item [relic]="relic" class="frame relic {{relic.class}}" draggable="true" (dragstart)="onDragStart($event, relic)"></por-relic-item>
+            <div>
+                <div class="name">{{ relic.name }}</div>
+                <div class="description">{{ relic.description }}</div>
+            </div>
+        </div>
+    </div>
+</div>

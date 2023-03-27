@@ -1,0 +1,16 @@
+<div class="wrapper">
+    <div class="content">
+        <div class="months">
+            <por-month *ngFor="let month of getValidMonth()" [month]="month" [class.disabled]="!month.activated">
+            </por-month>
+
+            <button (click)="addMonth()">Add a month</button>
+        </div>
+        <div class="dropzone" dropzone="move text/plain" (dragover)="onDragOver($event)" (dragenter)="onDragEnter($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event)">
+            <div class="dropzoneRef" #dropzoneBuilding></div>
+        </div>
+    </div>
+
+</div>
+
+<div class="ghostElement" #ghost></div>

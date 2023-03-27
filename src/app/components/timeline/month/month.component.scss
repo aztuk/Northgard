@@ -1,0 +1,39 @@
+:host {
+    display: inline-block;
+    width: 120px;
+    position: relative;
+    margin-right: 1px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    .image {
+        height: 40px;
+        overflow: hidden;
+        border-radius: 5px;
+        border: #232e37 1px solid;
+        img {
+            width: 100%;
+        }
+    }
+    &.disabled .image {
+        opacity: .5;
+        filter: saturate(0);
+    }
+    .timestamp {
+        margin-bottom: 8px;
+        padding: 0 5px;
+        .month-name {
+            display: block;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 1px 1px black;
+            font-size: 15px;
+        }
+        .year {
+            display: block;
+            color: #f5dba2;
+            font-weight: bold;
+            text-shadow: 0 1px 1px black;
+            font-size: 12px;
+        }
+    }
+}

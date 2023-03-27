@@ -1,0 +1,14 @@
+<div class="panel">
+    <div class="header">
+        <h1>Actions</h1>
+        <p>Some miscellaneous actions to drop in the timeline</p>
+    </div>
+    <div class="category">
+        <div class="action-item" *ngFor="let action of actions">
+            <por-special-item [action]="action" class="frame action {{action.class}}" draggable="true" (dragstart)="onDragStart($event, action)"></por-special-item>
+            <div>
+                <div class="name">{{ action.name }}</div>
+            </div>
+        </div>
+    </div>
+</div>

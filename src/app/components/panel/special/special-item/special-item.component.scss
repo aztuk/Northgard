@@ -1,0 +1,17 @@
+:host {
+    position: relative;
+    /* Created with https://www.css-gradient.com */
+    background: linear-gradient(to top, #3c536c 20%, #2b3b4a 100%);
+    border: 1px solid #222B35;
+    box-shadow: 0 0 0 1px #4A5D72, 0 0 0 2px #171E26, 0 0px 16px 3px rgb(154 218 255 / 33%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    border-radius: 50%;
+    &:hover {
+        filter: brightness(1.2);
+    }
+}

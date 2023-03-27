@@ -1,0 +1,16 @@
+<div class="selected" (click)="openList = true">
+    <div class="clan-icon ">
+        <img src="../../../../assets/images/clans/clans_{{selectedClan}}_small.png" />
+    </div>
+    {{ selectedClan }}
+</div>
+
+<div class="dropdown" *ngIf="openList">
+    <div class="clan-list">
+        <button *ngFor="let clan of clans" (click)="selectClan(clan)" class="menu" [class.active]="clan === selectedClan">
+                    
+            <div class="clan-icon "><img src="../../../../assets/images/clans/clans_{{clan}}_small.png" />
+            </div> {{ clan }}</button>
+    </div>
+    <div class="overlay" (click)="openList = false"></div>
+</div>

@@ -1,0 +1,19 @@
+:host {
+    .wrapper {
+        display: flex;
+        .left-panel {
+            display: block;
+            flex-shrink: 0;
+            width: 275px;
+            border-right: 1px solid #171e26;
+            box-shadow: 2px 0 0 0px #596478, 3px 0 0 0px #171e26;
+            height: 100vh;
+            background: url(../../../assets/images/sideMenuBG.png);
+        }
+        .right-panel {
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.panel {
+    .category {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 11px;
+        .relic {
+            cursor: grab;
+            border-radius: 0px;
+            flex-shrink: 0;
+            margin-right: 16px;
+        }
+    }
+    .section-title {
+        margin-bottom: 12px;
+        margin-left: 13px;
+    }
+    .relic-item {
+        display: flex;
+        align-items: center;
+        line-height: 1.58;
+        .name {
+            color: #f1f8ff;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        .description {
+            color: #89a9c9;
+            font-size: 11px;
+        }
+        margin-bottom: 16px;
+    }
+}

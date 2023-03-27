@@ -1,0 +1,10 @@
+:host {
+    display: block;
+    background: linear-gradient(to top, #1f2832, #293541);
+    border-right: 1px solid #171e26;
+    box-shadow: 0 2px 0 0px #596478, 0 3px 0 0px #171e26, 0 2px 8px rgba($color: #000000, $alpha: .5);
+    margin-bottom: 3px;
+    height: 40px;
+    position: relative;
+    z-index: 60;
+}
